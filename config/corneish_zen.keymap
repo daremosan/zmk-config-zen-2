@@ -35,8 +35,8 @@
 // | SHFT |     |     |     |     |     |   | PG_DN |     | DWN |     |     |       |
 //                    | GUI |     | ENT |   | SPC   |     | ALT |
                         bindings = <
-   &kp TAB   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6    &kp N7   &kp N8 &kp N9    &kp N0 &kp BT_CLR
-   &bt LCTRL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PG_UP &kp LEFT &kp UP &kp RIGHT &trans &kptrans
+   &kp TAB   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6    &kp N7   &kp N8 &kp N9    &kp N0 &bt BT_CLR
+   &kp LCTRL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PG_UP &kp LEFT &kp UP &kp RIGHT &trans &kptrans
    &kp LSHFT &trans       &trans       &trans       &trans       &trans       &kp PG_DN &trans   &kp DOWN &trans  &trans &trans
                           	           &kp LGUI     &trans       &kp RET      &kp SPACE &trans   &kp RALT
                         >;
