@@ -15,9 +15,9 @@
         compatible = "zmk,combos";
 
         layer3 {
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
             key-positions = <37 40>;
-            layers = <3>;
+            layers = <4>;
         };
     };
 
@@ -34,27 +34,10 @@
             //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp RET    &kp SPACE  &mo 2  &kp RALT
-            >;
-        };
-
-        raise_layer {
-            label = "SYMBOL";
-
-            // ------------------------------------------------------------------------------------------------------------------
-            // |  TAB   |  !            |  @                 |  #               |  $                |  %        |       |  ^      |  &     |  *            |  (     |  )       | BKSP |
-            // | CTRL   | Mag full      | Mag left           | Magnet center    | Mag right         |           |       |  -      |  =     |  \            |  [     |  ]       |  `   |
-            // | SHFT   |               |                    |                  |                   |           |       |  _      |  +     | "|"           |  {     |  }       |  ~   |
-            //                          | GUI                |                  | ENT               |           |       | SPC     |        | ALT           |
-
-            bindings = <
-&kp TAB    &kp EXCL   &kp AT         &kp HASH      &kp DLLR              &kp PRCNT                &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp MINUS  &kp EQUAL  &kp BSLH         &kp LBKT  &kp RBKT  &kp GRAVE
-&kp LSHFT  &trans     &trans         &trans        &trans                &trans                   &kp UNDER  &kp PLUS   &kp PIPE         &kp LBRC  &kp RBRC  &kp TILDE
-                                     &kp LGUI      &trans                &kp RET                  &kp SPACE  &trans     &kp RALT
+&kp TAB          &kp Q             &kp W           &kp E           &kp R               &kp T      &kp Y      &kp U        &kp I            &kp O            &kp P                      &kp BSPC
+&kp LCTRL        &mt LEFT_SHIFT A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_CONTROL F  &kp G      &kp H      &mt LCTRL J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp C_AC_SEARCH  &kp Z             &kp X           &kp C           &kp V               &kp B      &kp N      &kp M        &kp COMMA        &kp DOT          &kp FSLH                   &kp ESC
+                                                   &mo 1           &mo 2               &kp RET    &kp SPACE  &mo 1        &mo 2
             >;
         };
 
@@ -68,10 +51,27 @@
             //                    | GUI |     | ENT |   | SPC   |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &trans     &kp PAGE_UP    &kp UP_ARROW    &kp PAGE_DOWN  &trans  &trans
-&kp LCTRL  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &trans     &kp LEFT       &kp DOWN_ARROW  &kp RIGHT      &trans  &trans
-&kp LSHFT  &trans        &trans        &trans        &trans        &trans          &trans     &kp PAGE_DOWN  &kp COMMA       &trans         &trans  &mo 3
-                                       &kp LGUI      &trans        &kp RET         &kp SPACE  &trans         &kp RALT
+&kp TAB    &kp N1           &kp N2        &kp N3        &kp N4        &kp N5          &trans         &kp PAGE_UP         &kp UP_ARROW    &kp PAGE_DOWN         &trans  &kp LC(BACKSPACE)
+&kp LCTRL  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp C_AC_BACK  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT             &trans  &kp C_VOLUME_DOWN
+&kp LSHFT  &kp C_VOLUME_UP  &kp C_VOL_DN  &kp C_MUTE    &trans        &trans          &trans         &kp C_AC_SCROLL_UP  &trans          &kp C_AC_SCROLL_DOWN  &trans  &mo 3
+                                          &kp LGUI      &trans        &kp RET         &kp SPACE      &trans              &kp RALT
+            >;
+        };
+
+        raise_layer {
+            label = "SYMBOL";
+
+            // ------------------------------------------------------------------------------------------------------------------
+            // |  TAB   |  !            |  @                 |  #               |  $                |  %        |       |  ^      |  &     |  *            |  (     |  )       | BKSP |
+            // | CTRL   | Mag full      | Mag left           | Magnet center    | Mag right         |           |       |  -      |  =     |  \            |  [     |  ]       |  `   |
+            // | SHFT   |               |                    |                  |                   |           |       |  _      |  +     | "|"           |  {     |  }       |  ~   |
+            //                          | GUI                |                  | ENT               |           |       | SPC     |        | ALT           |
+
+            bindings = <
+&kp TAB    &kp EXCL   &kp AT           &kp HASH      &kp DLLR              &kp PRCNT                &kp CARET  &kp AMPS         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS             &kp EQUAL
+&kp LCTRL  &kp CARET  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp MINUS  &kp EQUAL        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NON_US_BACKSLASH  &kp GRAVE
+&kp LSHFT  &kp LC(O)  &kp PRINTSCREEN  &trans        &kp LC(C)             &kp LA(P)                &kp UNDER  &kp PLUS         &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans                &kp TILDE
+                                       &kp LGUI      &trans                &kp RET                  &kp SPACE  &kp RIGHT_SHIFT  &kp RALT
             >;
         };
 
