@@ -15,9 +15,23 @@
         compatible = "zmk,combos";
 
         layer3 {
-            bindings = <&mo 4>;
+            bindings = <&mo 3>;
             key-positions = <37 40>;
             layers = <4>;
+        };
+    };
+
+    behaviors {
+        homerow_a_shift: homerow_a_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_A_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <13>;
         };
     };
 
@@ -54,7 +68,7 @@
 &kp TAB    &kp N1           &kp N2        &kp N3        &kp N4        &kp N5          &trans         &kp PAGE_UP         &kp UP_ARROW    &kp PAGE_DOWN         &trans  &kp LC(BACKSPACE)
 &kp LCTRL  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp C_AC_BACK  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT             &trans  &trans
 &kp LSHFT  &kp C_VOLUME_UP  &kp C_VOL_DN  &kp C_MUTE    &trans        &trans          &trans         &kp C_AC_SCROLL_UP  &trans          &kp C_AC_SCROLL_DOWN  &trans  &mo 3
-                                          &kp LGUI      &trans        &kp RET         &kp SPACE      &trans              &kp RALT
+                                          &trans        &trans        &kp RET         &kp SPACE      &trans              &kp RALT
             >;
         };
 
@@ -71,7 +85,7 @@
 &kp TAB    &kp EXCL   &kp AT           &kp HASH      &kp DLLR              &kp PRCNT                &trans     &trans           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS             &kp EQUAL
 &kp LCTRL  &kp CARET  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans     &trans           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NON_US_BACKSLASH  &kp GRAVE
 &kp LSHFT  &kp LC(O)  &kp PRINTSCREEN  &trans        &kp LC(C)             &kp LA(P)                &trans     &trans           &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans                &kp TILDE
-                                       &kp LGUI      &trans                &kp RET                  &kp SPACE  &kp RIGHT_SHIFT  &kp RALT
+                                       &kp LGUI      &trans                &kp RET                  &kp SPACE  &kp RIGHT_SHIFT  &trans
             >;
         };
 
